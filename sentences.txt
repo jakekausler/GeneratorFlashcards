@@ -1,0 +1,80 @@
+# Class -> Class of Word
+# Class0 -> Use same class across card
+# 
+# c -> case to match
+# n -> number to match
+# t -> tense to match
+# m -> mood to match
+# p -> person to match
+# g -> gender to match
+# 
+# IMPV -> imperative
+# IND -> indicative
+# 
+# N -> Nominitive
+# G -> Genitive
+# D -> Dative
+# A -> Accusative
+# V -> Vocative
+# 
+# S -> Singular
+# P -> Plural
+# 
+# 1 -> First Person
+# 2 -> Second Person
+# 3 -> Third Person
+# 
+# M -> Masculine
+# F -> Feminine
+# E -> Neuter
+# 
+# po -> Opposite of p (1 <--> 2, 3 <--> 3)
+# 
+# PRES -> present
+
+([Greeting IMPV PRES 2 S]) ([Name V S])	$1 $2
+([Greeting IMPV PRES 2 n0]) ([Profession|Group V n0])	$1 $2
+([Greeting IMPV PRES 2 n])	$1
+(πῶς [ἔχω IND PRES p0 n0];) ([Feeling IND PRES p0o n0])	How IS($1_P, $1_N) GENERATE(Pronoun, PersonalPronoun, $1_P, $1_N)? $2_EVAL
+(τί [PersonalPronoun D S p0] ὄνομά ἐστιν;) ([Name N S] ὄνομά [PersonalPronoun D S p0o])	What is GENERATE(Pronoun, $1_C, G, $1_N, $1_P) name? GENERATE(Pronoun, $2_C, G, $2_N, $2_P) name is $2a
+([Farewell IMPV PRES 2 S]) ([Name V S])	$1 $2
+([Farewell IMPV PRES 2 n0]) ([Profession|Group V n0])	$1 $2
+([Farewell IMPV PRES 2 n])	$1
+(εἰς αὖθις) ([Name V S])	Until next time $2
+(εἰς αὖθις) ([Profession|Group V n])	Until next time $2
+(ἆρα [συνίης IND PRES p0 n0]); ([συνίης IND PRES p0o n0])	DO($1_P, $1_N) $1? $2
+(οὐκ [οἶδα IND PRES p n])	NEGATE($1)
+(πῶς λέγεται {} [Language0 D S];) (λέγεται {} [Language0 D S])	How do you say {} in $1? It's {} in $2
+(τί σημαίνει τό {})	What does {} mean?
+(ναί)	Yes
+(οὐχί)	No
+(οὐδαμῶς)	Not at all
+(νή Δία)	Absolutely
+(ἀντιβολέω)	Please
+([δέομαι IND PRES p0 n0] [PersonalPronoun G p n] [Object G n] [PersonalPronoun D p0 n0])	Can GENERATE(Pronoun, $1d_C, N, $1d_N, $1d_P) have INDEF($1c_TRAN, $1c_N)|the $1c_EVAL from GENERATE(Pronoun, $1b_C, A, $1b_N, $1b_P)
+([δέομαι IND PRES p0 n0] [PersonalPronoun G p n] [Action INF PRES] [PersonalPronoun D p0 n0])	Can GENERATE(Pronoun, $1b_C, N, $1b_N, $1b_P) $1c_TRAN for GENERATE(Pronoun, $1d_C, A, $1d_N, $1d_P)
+(χάριν [PersonalPronoun D 2 n] ἔχω)	Thank GENERATE(Pronoun, $1a_C, A, $1a_N, $1a_P)
+(συγγνώμην μοι [ἔχω IMPV PRES 2 n])	GENERATE(Pronoun, $1a_C, A, $1a_N, $1a_P) are welcome
+(διὰ τί;)	Why?
+(ποῦ;)	Where?
+(ποῖ;)	To Where?
+(πόθεν;)	From Where?
+(πότε;)	When?
+(πῶς;)	How?
+([πόσοι g N P];)	How many?
+(τί ἐστι [DemonstrativePronoun E A n];)	What IS($1_P, $1_N) GENERATE(Pronoun, $1_Class, $1_N, $1_TRAN)
+(ἆρα ?;)	Question Indicator
+(πότερον {}... ἤ {})	Whether {}... or {}
+(ἀεί)	Always
+(πολλάκις)	Often
+(ἐνίοτε)	Sometimes
+(σπανίως)	Seldom
+(οὐδέποτε)	Never
+(καθ ἡμέραν)	Daily
+(ἄρτι)	Recently
+(ἤδη)	Already
+(νῦν)	Now
+(πάλιν)	Again
+(ἐχθές)	Yesterday
+(τήμερον)	Today
+(αὔριον)	Tomorrow

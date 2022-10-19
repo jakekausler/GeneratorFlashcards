@@ -1,0 +1,25 @@
+Greeting
+χαίρω
+
+Farewell
+ὑγιαίνω
+
+Profession
+διδάσκολος
+μαθητής
+
+Feeling
+(καλῶς [ἔχω m t p n])
+(κακῶς [ἔχω m t p n])
+([κάμνω m t p n])
+([ἀσθενέω m t p n])
+
+Language
+ἀγγλική
+ἡλλενική
+
+PersonalPronoun
+PersonalPronoun
+
+DemonstrativePronoun
+DemonstrativePronoun
