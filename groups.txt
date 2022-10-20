@@ -9,10 +9,10 @@ Profession
 μαθητής
 
 Feeling
-(καλῶς [ἔχω m t p n])
-(κακῶς [ἔχω m t p n])
-([κάμνω m t p n])
-([ἀσθενέω m t p n])
+*καλῶς [ἔχω VB m t p n]	GENERATE(Pronoun, PersonalPronoun, N, $1_P, $1_N) IS($1_P, $1_N) well
+*κακῶς [ἔχω VB m t p n]	GENERATE(Pronoun, PersonalPronoun, N, $1_P, $1_N) IS($1_P, $1_N) not well
+*[κάμνω VB m t p n]	GENERATE(Pronoun, PersonalPronoun, N, $1_P, $1_N) IS($1_P, $1_N) tired
+*[ἀσθενέω VB m t p n]	GENERATE(Pronoun, PersonalPronoun, N, $1_P, $1_N) IS($1_P, $1_N) sick
 
 Language
 ἀγγλική
@@ -23,3 +23,11 @@ PersonalPronoun
 
 DemonstrativePronoun
 DemonstrativePronoun
+
+Action
+γράφω
+λέγω
+
+Object
+βιβλίον
+θηρίον
