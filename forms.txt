@@ -1,0 +1,50 @@
+Verb
+# Indicative, Subjunctive, Optative, Imperative
+# BaseWord Word Translation Mood Tense Voice Number Person
+# 
+# Infinitive
+# BaseWord Word Translation Mood Tense Voice
+#
+# Participle
+# BaseWord Word Translation Mood Tense Voice Number Gender Case
+#
+χαίρω
+
+ὑγιαίνω
+
+γράφω
+
+λέγω
+
+-----
+Noun
+# BaseWord Word Translation Number Case
+διδάσκολος
+
+μαθητής
+
+ἀγγλική
+
+ἡλλενική
+
+βιβλίον
+
+θηρίον
+
+-----
+Pronoun
+# PersonalPronoun
+# BaseWord Word Translation Person Number Case
+#
+# DemonstrativePronoun
+# BaseWord Word Translation Person Number Gender Case
+#
+PersonalPronoun
+
+DemonstrativePronoun
+
+-----
+Adjective
+πόσοι
+
+-----
