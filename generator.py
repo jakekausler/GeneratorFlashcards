@@ -138,7 +138,7 @@ def generate_noun(word):
             word.number = random.choice(NUMBERS)
         if word.cases not in CASES:
             word.cases = random.choice(CASES)
-        valid_word = choose_validchoose_valid_word(word)
+        valid_word = choose_valid_word(word)
     word.baseword = valid_word
 
 def generate_verb(word):
